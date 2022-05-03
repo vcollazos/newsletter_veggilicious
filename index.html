@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veggielicious</title>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;600;800&display=swap');
+        * {
+            margin: 0;
+            border: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #cccccc;
+            font-size: 16px;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0%;
+            color: #171a1b;
+        }
+        .wrapper {
+            width: 100%;
+            table-layout: fixed;
+            background: #cccccc;          
+        }
+        .main {
+            background-color: #F5F5F5;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 600px;
+            border-spacing: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #171a1b;
+            text-align: center;
+        }
+        table {
+            border-spacing: 0;
+        }
+        td {
+            padding: 0;
+        }
+        img {
+            border: 0;
+        }
+                
+        .two-columns {
+            font-size: 0;
+            display: flex;
+        }
+        .two-columns .column {
+            width: 100%;
+            max-width: 300px;
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+        }
+        .menu a {
+            font-family: 'Poppins';
+            font-weight: bold;
+            color: #ffffff;
+            font-size: 14px;
+            padding: 10px 5px 15px 70px;        
+            display: inline-block;
+            vertical-align: top;     
+        }               
+        
+        .menu a:hover {
+            color: #8CC740;
+        }  
+        .linkMenu {            
+            padding: 10px 10px 5px;           
+        }
+
+        a {
+            text-decoration: none;            
+        }
+        p {
+            font-family: 'Poppins', sans-serif;
+        }
+        .three-columns {
+            text-align: center;
+            font-size: 0;
+            padding: 15px 0 25px;
+        }
+        .three-columns .column {
+            width: 100%;
+            max-width: 200px;
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+        }
+        .three-columns .padding {
+            padding: 15px;            
+        }
+        .three-columns .content {
+            font-size: 15px;
+            line-height: 20px;
+            padding: 0 5px;
+        }
+        .button {
+            background-color: #E68100;
+            color: #F5F5F5;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .button:hover {
+            background-color: #f8d6aafb;            
+            color: #E68100;            
+        }
+        .button-menu {
+            background-color: #8CC740;
+            color: #F5F5F5;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .button-menu:hover {
+            background-color: #c4f880;
+            color: #8CC740;
+            
+        }
+        .background-especialRecetas{
+            background-image: url(img/especial\ recetas.png);
+            background-size: cover;
+            width: 600px;
+            height: 400px;
+            max-width: 100%;   
+        }
+        a.button-menu {
+            background-color: #8CC740;
+            color: #F5F5F5;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .three-columns-sinpaddingTop{
+            text-align: center;
+            font-size: 0;
+            padding: 0px 0 0px;
+        }
+        .three-columns-sinpaddingTop .column {
+            width: 100%;
+            max-width: 200px;
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+        }
+        .two-columns-menu {
+            text-align: center;
+            font-size: 0;
+        }
+        .two-columns-menu .column {
+            width: 100%;
+            max-width: 300px;
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+        }
+        .two-columns-menu .padding {
+            padding: 20px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        .two-columns-menu .content {
+            font-size: 15px;
+            line-height: 20px;
+            text-align: left;
+        }
+        .two-columns-sinpadding {
+            text-align: center;
+            font-size: 0;
+        }
+        .two-columns-sinpadding .column {
+            width: 100%;
+            max-width: 300px;
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+        }
+        .two-columns-sinpadding .padding {
+            padding: 0px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+
+        @media screen and (max-width: 400px) {           
+            img.mousse-especial {
+                width: 300 !important;
+                max-width: 300px !important;
+            }
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <table class="main" width="100%">
+        <!-- Borde header -->
+            <tr>
+                <td height="10" style="background-color: #000000;"></td>
+            </tr>
+         <!-- SECCIÓN HEADER LOGO E ICONOS -->
+         <tr>
+            <td style="padding: 14px 0 4px;background-color: #26292b">
+                <table width="100%">
+                    <tr>
+                        <td class="two-columns">
+
+                            <table class="column">
+                                <tr>
+                                    <td style="padding: 0 22px 10px;">
+                                        <a href="#"><img src="https://i.ibb.co/PDZvfK1/Logo-Blanco.png" alt="logo" tittle="Logo" width="150" style="max-width: 90%;"></a>
+                                    </td>   
+                                                                      
+                                </tr>
+                            </table>
+                            
+                            <table>
+                                <tr>
+                                    <td class="menu">
+                                        <a href="https://veggieliciousrestaurant.vcollazos.es/menu" alt="Menú" class="linkMenu">Menú</a>
+                                        <a href="https://veggieliciousrestaurant.vcollazos.es/reservas" alt="Reservas" class="linkMenu">Reservas</a>
+                                                                         
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+         <!-- SECCIÓN BANNER  -->
+         <tr>
+            <td><a href="#"><img src="https://i.ibb.co/BnN2CFg/banner.png" alt="banner" width="600" style="max-width: 100%;"></a></td>
+        </tr>
+                
+        <!-- Sección servicios -->
+            <tr style="background-color: #F5F5F5">
+                <td>
+                    <table width="100%">
+                        <tr>
+                            <td class="three-columns">
+                                <table class="column">
+                                    <tr>
+                                        <td class="padding">
+                                            <table class="content">
+                                                <tr>
+                                                    <td>
+                                                        <a href="#"><img src="https://i.ibb.co/WGfL8R2/icono-entrega-rapida-ok.png" alt="entrega" width="60" style="max-width: 60px;"></a>                                                        
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <p style="font-weight: bold; font-size: 17px; color: #8CC740;padding-bottom:10px;">Entrega Rápida</p>
+                                                        <p style="color: #171a1b; font-size: 17px;">Comida fresca desde nuestra cocina hasta la puerta de tu hogar</p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table class="column">
+                                    <tr>
+                                        <td class="padding">
+                                            <table class="content">
+                                                <tr>
+                                                    <td>
+                                                        <a href="#"><img src="https://i.ibb.co/rMM2Cs8/icono-comida-fresca-ok.png" alt="comida fresca" width="60" style="max-width: 60px;"></a>
+                                                        
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <p style="font-weight: bold; font-size: 17px; color: #8CC740;padding-bottom:10px;">Ingredientes Frescos</p>
+                                                        <p style="color: #171a1b; font-size: 17px;">Desde nuestra granja hasta nuestra cocina y luego hasta tu plato</p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table class="column">
+                                    <tr>
+                                        <td class="padding">
+                                            <table class="content">
+                                                <tr>
+                                                    <td>
+                                                        <a href="#"><img src="https://i.ibb.co/Rh7jJq4/icono-mapa-ok.png" alt="ordenar" width="60" style="max-width: 60px;"></a>
+                                                        
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <p style="font-weight: bold; font-size: 17px; color: #8CC740;padding-bottom:10px;">Ordena para llevar</p>
+                                                        <p style="color: #171a1b; font-size: 17px;">¿No tienes tiempo para comer con nosotros?no hay problema, ordena para llevar</p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+<!-- Sección platos preferidos -->
+            <tr style="background-color: #262626">
+                <td>
+                    <table width="100%">
+                        <tr>
+                            <td class="three-columns">
+                                <table class="column">
+                                    <tr>
+                                        <td class="padding">
+                                            <table class="content">
+                                                <tr>
+                                                    <td>
+                                                        <a href="#"><img src="https://i.ibb.co/Xx624dx/pizza2.jpg" alt="plato coreano" width="150" style="max-width: 150px; padding-bottom: 8px;"></a>
+                                                        
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <p style="font-weight: bold; font-size: 16px; color: #8CC740;">Tazón coreano</p>
+                                                        <p style="color: #F5F5F5; font-size: 16px; padding-top: 20px; padding-bottom: 30px;">Donec lobortis sit amet erat a elementum. Nullam nibh tellus, tempus non purus vel, eleifend iaculis nisl. Morbi tincidunt lorem sed neque imperdiet iaculis.</p>
+                                                        <a href="https://veggieliciousrestaurant.vcollazos.es/reservas" class="button">Reservar Mesa</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table class="column">
+                                    <tr>
+                                        <td class="padding">
+                                            <table class="content">
+                                                <tr>
+                                                    <td>
+                                                        <a href="#"><img src="https://i.ibb.co/PxhLCzk/pizza.jpg" alt="pizza" width="150" style="max-width: 150px;padding-bottom: 8px;"></a>
+                                                        
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <p style="font-weight: bold; font-size: 16px; color: #8CC740;">Pizza vegetariana</p>
+                                                        <p style="color: #F5F5F5; font-size: 16px; padding-top: 20px; padding-bottom: 30px;">Donec lobortis sit amet erat a elementum. Nullam nibh tellus, tempus non purus vel, eleifend iaculis nisl. Morbi tincidunt lorem sed neque imperdiet iaculis.</p>
+                                                        <a href="https://veggieliciousrestaurant.vcollazos.es/reservas" class="button">Reservar Mesa</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table class="column">
+                                    <tr>
+                                        <td class="padding">
+                                            <table class="content">
+                                                <tr>
+                                                    <td>
+                                                        <a href="#"><img src="https://i.ibb.co/8M91rmb/pancake.jpg" alt="pancake " width="150" style="max-width: 150px;padding-bottom: 8px;"></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <p style="font-weight: bold; font-size: 16px; color: #8CC740;">Panqueques</p>
+                                                        <p style="color: #F5F5F5; font-size: 16px; padding-top: 20px; padding-bottom: 30px;">Donec lobortis sit amet erat a elementum. Nullam nibh tellus, tempus non purus vel, eleifend iaculis nisl. Morbi tincidunt lorem sed neque imperdiet iaculis.</p>
+                                                        <a href="https://veggieliciousrestaurant.vcollazos.es/reservas/" class="button">Reservar Mesa</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+<!-- Sección SELECCIÓN DEL CHEF-->
+            <tr style="background-color: #F5F5F5;">
+                <td style="padding: 15px 0 50px;"> 
+                    <table widht="100%">
+                        <tr>
+                            <td style="text-align: center; padding: 15px;">
+                                <p style="font-size: 32px; font-weight: bold; color: #8CC740;">La Selección del Chef</p>
+                                <p style="line-height: 30px; font-size: 25px; padding: 10px 0 10px; font-family: 'Pacifico';">Este es el plato que el chef a seleccionado para ti</p>                                
+                            </td>
+                        </tr>
+                        </tr>                        
+                            <td style="text-align: center; padding: 5px;">
+                                <a href="#"><img src="https://i.ibb.co/Xk2wkk1/plato-coreano.jpg" alt="coreano" width="300" style="max-width: 300px;"></a>
+                                <p style="line-height: 23px; font-size: 15px; padding: 15px 0 30px; font-family: 'Poppins';">Donec et dignissim nulla, non condimentum nisl. Sed rhoncus eu massa eget rhoncus. Curabitur lobortis laoreet orci et dignissim. Praesent convallis enim risus, at fermentum tellus malesuada vel. Sed lobortis, sem vitae aliquam molestie, dui purus feugiat nulla, ut tempor dui enim a ex.</p>
+                                <a href="https://veggieliciousrestaurant.vcollazos.es/menu" class="button-menu">Ver Menú</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>   
+
+    <!--  BORDE SEPARACIÓN SECCIÓN  -->
+            <tr>
+                <td height="2" style="background-color: #171a1b;"></td>
+            </tr>
+
+    <!-- SECCIÓN PLATOS OFRECIDOS DEL MENÚ -->
+            <tr>       
+                <td>
+                    <a href="#" ><img src="https://i.ibb.co/kSXtS42/especial-recetas.png" alt="especial recetas" width="600" style="max-width: 100%;">             
+                    </a>            
+                   
+                </td>
+            </tr> 
+    
+    <!-- SECCIÓN LISTA DE ALGUNOS PLATOS DEL MENÚ -->
+            <tr style="background-color: #F5F5F5;">
+                <td style="padding: 15px 0 15px;"> 
+                    <table widht="100%">                    
+                        <td style="text-align: center; padding: 5px;">
+                            <a href="#"><img src="https://i.ibb.co/BVhqnGg/icono-menu.png" alt="Menu" width="60" style="max-width: 60px;"></a>                            
+                            <p style="line-height: 23px; font-size: 15px; padding: 15px 70px 15px; font-family: 'Poppins'; font-weight: bold; font-size: 18px;text-align: left;">Tazón Japonés ..................................... <span style="color: #8CC740;">27,50€</span></p>
+
+                            <p style="line-height: 23px; font-size: 15px; padding: 15px 70px 15px; font-family: 'Poppins'; font-weight: bold; font-size: 18px;text-align: left;">Ensalada Tailandesa ........................... <span style="color: #8CC740;">18,50€</span></p>
+
+                            <p style="line-height: 23px; font-size: 15px; padding: 15px 70px 15px; font-family: 'Poppins'; font-weight: bold; font-size: 18px;text-align: left;">Tazón Salvaje ........................................ <span style="color: #8CC740;">  5,80€</span></p>
+
+                            <p style="line-height: 23px; font-size: 15px; padding: 15px 70px 15px; font-family: 'Poppins'; font-weight: bold; font-size: 18px;text-align: left;">Lasagna .................................................. <span style="color: #8CC740;">  7,50€</span></p>
+
+                            <p style="line-height: 23px; font-size: 15px; padding: 15px 70px 15px; font-family: 'Poppins'; font-weight: bold; font-size: 18px;text-align: left;">Pasta Sorpresa ..................................... <span style="color: #8CC740;">17,50€</span></p>
+                            
+                        </td>                    
+                        
+                    </table>
+                </td>
+            </tr> 
+            
+    <!-- SECCIÓN DE OFERTA DIARIA E IMÁGENES DE LOS PLATOS OFRECIDOS -->
+            <tr style="background-color: #F5F5F5;">
+                <td style="padding: 15px 200px 10px; text-align: center;">            
+                    <a href="#"><img src="https://i.ibb.co/tLTcqww/icono-plato.png" alt="Menu" width="60" style="max-width: 60px;"></a>
+                    <p style="font-size: 32px;font-family: 'Pacifico'; color: #8CC740;">Oferta Diaria</p>                                                               
+                    
+            </tr>            
+
+    <!-- SECCIÓN TABLA DE IMÁGENES DE LAS OFERTAS DEL DÍA EN 3 COLUMNAS POR IGUAL -->
+            <tr style="background-color: #F5F5F5">
+                <td>
+                    <table width="100%">
+                        <tr>
+                            <td class="two-columns-sinpadding">
+                                <table class="column">
+                                    <tr>
+                                        <td class="">
+                                            <table class="">
+                                                <tr>
+                                                    <td>
+                                                        <a href="#"><img src="https://i.ibb.co/jLng7M5/combinado-coreano.png" alt="combinado coreano" width="300" style="max-width: 300px;"></a>                                                                                                            
+                                                    </td>
+                                                </tr>                                                
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>                               
+                                <table class="column">
+                                    <tr>
+                                        <td class="">
+                                            <table class="">
+                                                <tr>
+                                                    <td>
+                                                        <a href="#"><img src="https://i.ibb.co/qBMLg1H/padthai.png" alt="padthai" width="300" style="max-width: 300px;"></a>                                                       
+                                                    </td>
+                                                </tr>                                                
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr style="background-color: #F5F5F5">
+                <td>
+                    <table width="100%">
+                        <tr>
+                            <td class="two-columns-sinpadding">                               
+                                <table class="column">
+                                    <tr>
+                                        <td class="">
+                                            <table class="">
+                                                <tr>
+                                                    <td>
+                                                        <a href="#"><img src="https://i.ibb.co/SBCNpTk/lasagna.png" alt="lasagna" width="300" style="max-width: 300px;"></a>  
+                                                    </td>
+                                                </tr>                                                
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table class="column">
+                                    <tr>
+                                        <td class="">
+                                            <table class="">
+                                                <tr>
+                                                    <td>
+                                                        <a href="#"><img src="https://i.ibb.co/h7qtSmg/salmon-teriyaki.png" alt="salmon" width="300" style="max-width: 300px;"></a>   
+                                                                                                           
+                                                    </td>
+                                                </tr>                                                
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+    <!-- SECCIÓN 2 COLUMNAS DE LOS PLATOS DEL DÍA -->
+            <tr>
+                <td style="background-color: #F5F5F5; color: #171a1b;">
+                    <table width="100%">
+                        <tr>
+                            <td class="two-columns-menu">
+                                <table class="column">
+                                    <tr>
+                                        <td class="padding">
+                                            <table class="content">
+                                                <tr>
+                                                    <td>
+                                                        <a href="#"><img src="https://i.ibb.co/GxXmLs4/CHOCOLATES.png" alt="chocolates" width="250" style="max-width: 250px;"></a>
+                                                       
+                                                        <p style="font-size: 20px; padding-top: 10px;color: #171a1b; font-family: 'Pacifico';">Sabrosos Bocados</p>
+                                                        <p style="padding-top: 20px; padding-bottom: 30px;">Bombones y chocolates elaborados tradicionalmente con un toque especial</p>
+                                                        <a href="https://veggieliciousrestaurant.vcollazos.es/reservas" class="button">Reservar Mesa</a>
+                                                    
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table class="column">
+                                    <tr>
+                                        <td class="padding">
+                                            <table class="content">
+                                                <tr>
+                                                    <td>
+                                                        <a href="#"><img src="https://i.ibb.co/Tqc57Qm/momos.jpg" alt="momos" width="260" style="max-width: 260px;"></a>
+                                                        
+                                                        <p style="font-size: 20px; padding-top: 10px;color: #171a1b; font-family: 'Pacifico';">Plato Delicioso</p>
+                                                        <p style="padding-top: 20px; padding-bottom: 30px;">Elaborado con productos de nuestro propio huerto, masa natural realizada con arroz</p>
+                                                        <a href="https://veggieliciousrestaurant.vcollazos.es/reservas" class="button">Reservar Mesa</a>
+                                                    
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+    <!--  BORDE SEPARACIÓN SECCIÓN  -->
+            <tr>
+                <td height="2" style="background-color: #171a1b;"></td>
+            </tr>
+
+<!-- SECCIÓN PLATOS OFRECIDOS DEL MENÚ -->
+            <tr>       
+                <td>
+                    <a href="#" ><img src="https://i.ibb.co/n1TX9GL/NUESTROS-POSTRES.png" alt="nuestros prostres" width="600"  style="max-width: 100%;">             
+                    </a>            
+                   
+            </tr>
+
+    <!-- Sección NUESTROS POSTRES -->
+            <tr style="background-color: #F5F5F5;">
+                <td style="text-align:center; padding: 30px 60px 30px;"> 
+                    <table widht="100%">
+                        <tr>
+                            <td style="text-align: center; padding: 15px;">
+                                <p style="font-size: 32px; font-weight: bold; color: #8CC740;">NUESTROS POSTRES</p>
+                                <p style="line-height: 30px; font-size: 25px; padding: 10px 0 10px; font-family: 'Pacifico';">Inolvidables, no podríamos vivir sin ellos</p>                           
+                                
+                            </td>
+                        </tr>                       
+                    </table>
+                </td>
+            </tr>
+            
+    
+    <!-- SECCIÓN TABLA DE IMÁGENES DE LOS MEJORES POSTRES EN 2 COLUMNAS sin padding -->
+            <tr>
+                <td style="background-color: #F5F5F5; color: #171a1b;">
+                    <table width="100%">
+                        <tr>
+                            <td class="two-columns-sinpadding">
+                                <table class="column">
+                                    <tr>
+                                        <td class="">
+                                            <table class="">
+                                                <tr>
+                                                    <td>
+                                                        <a href="#"><img src="https://i.ibb.co/sQp7t71/mousse-especial.png" alt="Mousse especial" class="mousse-especial" width="300" style="max-width: 300px;"></a> 
+                                                                                                       
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table class="column">
+                                    <tr>
+                                        <td class="">
+                                            <table class="">
+                                                <tr>
+                                                    <td>
+                                                        <a href="#"><img src="https://i.ibb.co/2sDD7Tk/BOMBONES.png" alt="bombones" width="300" style="max-width: 300px;"></a>                                                 
+                                                       
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="background-color: #F5F5F5; color: #171a1b;">
+                    <table width="100%">
+                        <tr>
+                            <td class="two-columns-sinpadding">
+                                <table class="column">
+                                    <tr>
+                                        <td class="">
+                                            <table class="">
+                                                <tr>
+                                                    <td>
+                                                        <a href="#"><img src="https://i.ibb.co/jwMcmgm/FLAN-DE-CARAMELO.png" alt="flan" width="300" style="max-width: 300px;"></a>                                       
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table class="column">
+                                    <tr>
+                                        <td class="">
+                                            <table class="">
+                                                <tr>
+                                                    <td>
+                                                        <a href="#"><img src="https://i.ibb.co/7p1SVvR/COMBINADO-DE-TURRON.png" alt="combinado turron" width="300" style="max-width: 300px;"></a>                                      
+                                                        
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+   
+
+    <!-- SECCIÓN HORARIOS DE APERTURA RESTAURANTE -->
+            <tr style="background-color: #F5F5F5;">
+                <td style=" text-align: center; padding: 20px 0 40px 30px;">                     
+                    <table widht="100%">
+                        <tr>
+                            <td style="text-align: center;padding: 50px 90px;">
+                                <p style="font-size: 32px; color: #8CC740; font-weight: bold;">Horario de Apertura</p>
+                                <p style="line-height: 25px; font-size: 20px; font-family: 'Pacifico'; padding: 10px 0 10px;">Martes a Jueves   <span style="color: #8CC740; font-family: 'Poppins'; font-weight: bold;">  11:30 AM - 24:30 PM</span></p>
+                                <p style="line-height: 25px; font-size: 20px; font-family: 'Pacifico'; padding: 10px 0 10px;">Viernes y Sábado   <span style="color: #8CC740; font-family: 'Poppins'; font-weight: bold;">  12:30 AM - 02:00 PM</span></p> 
+                                <p style="line-height: 25px; font-size: 20px; font-family: 'Pacifico'; padding: 10px 0 10px;">Domingo y Lunes  <span style="color: #8CC740; font-family: 'Poppins'; font-weight: bold;">  Cerrado</span></p>                             
+                                
+                            </td>
+                        </tr>                       
+                    </table>
+                </td>
+            </tr>
+
+     <!-- SECCIÓN FOOTER  -->
+            <tr>
+                <td style="background-color: #26292b; text-align: center;">
+                    <table width="100%">
+                        <tr>
+                            <td style="text-align: center; padding: 45px 20px; color: #ffffff;">
+                                <a href="#"><img src="https://i.ibb.co/PDZvfK1/Logo-Blanco.png" alt="logo" width="180"></a>
+                            
+                                <p style="padding: 10px; font-family: 'Pacifico'; font-size: 20px;">Somos Sociales</p>
+                               
+                                <a href="#"><img src="https://i.ibb.co/hfCzpNS/icno-facebook.png" alt="facebook" width="50"></a>
+                                <a href="#"><img src="https://i.ibb.co/k8hb62X/icono-instagram.png" alt="instagram" width="46"></a>                  
+                                <a href="#"><img src="https://i.ibb.co/zX8CjWm/icono-twitter.png" alt="twitter" width="50"></a>
+                                
+                                <p style="padding: 20px;">16 Avenida Madrid CCC,
+                                    Los Angeles, US, 95506</p>
+
+
+                                <a href="https://veggieliciousrestaurant.vcollazos.es/reservas" class="button">Reservar Mesa</a>
+
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td height="30" style="background-color: #000000"></td>
+            </tr>
+        </table>
+
+
+
+    </div>
+    
+</body>
+</html>
